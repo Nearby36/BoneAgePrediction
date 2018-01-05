@@ -7,6 +7,9 @@ Images from hospital are formated as DICOM (original data is compressed DICOM im
 In our data set, there are about 7,000 male patients and 17,000 female patients. 
 The training set given by RSNA is consist of 6833 male patients and 5778 female patients.
 All the data has chronological age, gender and bone age (from the exam report) information.
+## Main methods
+In the 1st round, data without preprocessing was fed into CaffeNet. It seemed that the model could not converge. Loss was about 5~9.
+======to be continued====
 ## Data preprocessing
 Data directly from the PACS may include many noisy images, such as x-ray images of elbow, hand images with non-hand part. We should delete these images to increase our performance.
 1. We firstly decompress the DICOM images using the gdcm library in Linux. Detail information can be seen in preprocess.py.
